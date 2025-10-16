@@ -1,0 +1,14 @@
+<robot name = "xarm7">
+    <link name = "ground_link">
+        <visual>
+             
+            <geometry>
+                <mesh filename = "package://ufactory_xarm7_description/meshes/link_base.stl" scale="1.0 1.0 1.0"/>
+            </geometry>
+        </visual>
+    </link>
+
+
+
+
+</robot>
