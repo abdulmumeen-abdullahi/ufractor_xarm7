@@ -5,7 +5,7 @@ The assembly strictly follows the [Ufactory Documentation](https://docs.ufactory
 
 ## Overview
 
-The model defines the full URDF structure for the Xarm7, including links, joints, and visual meshes.  
+The project defines the full URDF structure for the Xarm7, including links, joints, and visual meshes.  
 Visualization is done using Rviz, while simulation will be implemented in later phases.
 
 ## Key Specifications
