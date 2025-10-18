@@ -6,9 +6,14 @@ The assembly strictly follows the [Ufactory Documentation](https://docs.ufactory
 
 ## Overview
 
+<<<<<<< HEAD
 The project defines the full URDF structure for the Xarm7, including links, joints, and visual meshes with assigned materials.  
 Each link references its mesh in the `ufactory_xarm7_description/meshes` directory, and the arm is fully visualizable in **Rviz**.  
 Simulation and advanced control (MoveIt, Gazebo/Ignition) can be added in later phases.
+=======
+The project defines the full URDF structure for the Xarm7, including links, joints, and visual meshes.  
+Visualization is done using Rviz, while simulation will be implemented in later phases.
+>>>>>>> edcdc19766693a08a1e14630a0bdb49ff65c15af
 
 ## Key Specifications
 
