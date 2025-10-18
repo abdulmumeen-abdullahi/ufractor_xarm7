@@ -47,7 +47,7 @@ Joints define spatial relationships (`xyz` and `rpy` origins), parent-child hier
 - **Gripper:** Fixed joint at the end-effector for visualization purposes  
 - **Revolute joints:** Follow Xarm7 velocity limits  
 
-## Next Steps / Applications
+## Next Steps
 
 - **Visualization:** Launch in Rviz for kinematic inspection  
 - **Dynamic Simulation:** Integration with Gazebo or Ignition  
