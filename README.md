@@ -94,7 +94,7 @@ ros2 launch urdf_tutorial display.launch.py model:=$PWD/ufactory_xarm7_descripti
 - $PWD should point to the root of your cloned repository.
 - The ufactory_xarm7.urdf file must exist under ufactory_xarm7_description/urdf/.
 
-5. Visualize and Interact
+5. **Visualize and Interact**
 
 - Rviz will open with the Xarm7 robot loaded.
 - Use the Joint State Publisher GUI to move revolute joints interactively.
