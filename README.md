@@ -4,25 +4,23 @@ This project focuses on assembling, describing, and visualizing the **Ufactory X
 The assembly strictly follows the [Ufactory Documentation](https://docs.ufactory.cc/user_manual/ufactoryStudio/11.technical_specifications.html).
 
 
+
 ## Overview
 
-<<<<<<< HEAD
 The project defines the full URDF structure for the Xarm7, including links, joints, and visual meshes with assigned materials.  
 Each link references its mesh in the `ufactory_xarm7_description/meshes` directory, and the arm is fully visualizable in **Rviz**.  
 Simulation and advanced control (MoveIt, Gazebo/Ignition) can be added in later phases.
-=======
-The project defines the full URDF structure for the Xarm7, including links, joints, and visual meshes.  
-Visualization is done using Rviz, while simulation will be implemented in later phases.
->>>>>>> edcdc19766693a08a1e14630a0bdb49ff65c15af
+
 
 ## Key Specifications
 
 All revolute joints have:
 
-- **Effort:** maximum allowable torque or force of **3 Nm** for a start  
-- **Velocity:** maximum rotational speed of **3.14 rad/s (180°/s)**, as specified in the Ufactory documentation  
+- **Effort:** maximum allowable torque or force of **3 Nm**  
+- **Velocity:** maximum rotational speed of **3.14 rad/s (180°/s)**  
 
 The URDF also applies a **white material** for all links for consistent visualization.
+
 
 ## Joint Configuration
 
@@ -60,34 +58,54 @@ Joints define spatial relationships (`xyz` and `rpy` origins), parent-child hier
 
 Follow these steps to visualize the Xarm7 in Rviz:
 
-1. **Clone the repository**  
+### 1. Install ROS 2 and Required Packages
+
+Make sure you have a ROS 2 distribution installed (Humble or Iron recommended).  
+Then install the necessary packages:
+
+```bash
+sudo apt update
+sudo apt install ros-humble-urdf-tutorial \
+                 ros-humble-joint-state-publisher \
+                 ros-humble-joint-state-publisher-gui \
+                 ros-humble-robot-state-publisher \
+                 ros-humble-rviz2
+Replace humble with your ROS 2 distro if needed.
+```
+
+2. **Clone the repository**  
 
 ```bash
 git clone https://github.com/abdulmumeen-abdullahi/ufractor_xarm7.git
 cd ufractor_xarm7
 ```
 
-2. **Build the ROS 2 package**
+3. **Build the ROS 2 package**
 
 ```bash
 colcon build --symlink-install
 source install/setup.bash
 ```
 
-2. **Launch Rviz with the Xarm7 URDF**
+4. **Launch Rviz with the Xarm7 URDF**
 
 ```bash
 ros2 launch urdf_tutorial display.launch.py model:=$PWD/ufactory_xarm7_description/urdf/ufactory_xarm7.urdf
 ```
+- $PWD should point to the root of your cloned repository.
+- The ufactory_xarm7.urdf file must exist under ufactory_xarm7_description/urdf/.
 
-> This will open Rviz with the robot model loaded. Use the Joint State Publisher to move revolute joints interactively.
+5. Visualize and Interact
+
+- Rviz will open with the Xarm7 robot loaded.
+- Use the Joint State Publisher GUI to move revolute joints interactively.
+- The robot’s links are displayed with white material for clarity.
+
 
 ## Next Steps
 
-Dynamic Simulation: Integration with Gazebo or Ignition
-
-Control & Planning: MoveIt setup for motion planning
-
-Sensor & Gripper Modeling: Extend URDF to include sensors and gripper interactions
+- Dynamic Simulation: Integration with Gazebo or Ignition
+- Control & Planning: MoveIt setup for motion planning
+- Sensor & Gripper Modeling: Extend URDF to include sensors and gripper interactions
 
 *Developed as part of the [Aurora Robotics](https://ng.linkedin.com/company/aurora-robotics-in) Core Robotics Workshop – Task 4.*
