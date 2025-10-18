@@ -48,8 +48,7 @@ Joints define spatial relationships (`xyz` and `rpy` origins), parent-child hier
 - **Revolute joints:** Follow Xarm7 velocity limits  
 
 ## Next Steps
-
-- **Visualization:** Launch in Rviz for kinematic inspection  
+ 
 - **Dynamic Simulation:** Integration with Gazebo or Ignition  
 - **Control & Planning:** MoveIt setup for motion planning  
 - **Sensor & Gripper Modeling:** Extend URDF to include sensors, gripper interactions 
