@@ -59,7 +59,7 @@ Follow these steps to visualize the Xarm7 in Rviz:
 
 ### 1. Install ROS 2 and Required Packages
 
-Make sure you have a ROS 2 distribution installed (Humble or Iron recommended).  
+Make sure you have a ROS 2 distribution installed (Humble recommended).  
 Then install the necessary packages:
 
 ```bash
