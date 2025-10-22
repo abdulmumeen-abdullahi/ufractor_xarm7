@@ -76,10 +76,10 @@ Replace humble with your ROS 2 distro if needed.
 2. **Create the workspace and Clone the repository**  
 
 ```bash
-mkdir ufractor_xarm7_ws
-cd ufractor_xarm7_ws
+mkdir -p ufractor_xarm7_ws/src
+cd ufractor_xarm7_ws/src
 git clone https://github.com/abdulmumeen-abdullahi/ufractor_xarm7.git
-
+cd ..
 ```
 
 3. **Build the ROS 2 package**
