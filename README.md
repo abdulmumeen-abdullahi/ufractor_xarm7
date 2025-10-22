@@ -65,13 +65,13 @@ Then install the necessary packages:
 
 ```bash
 sudo apt update
-sudo apt install ros-humble-urdf-tutorial \
-                 ros-humble-joint-state-publisher \
-                 ros-humble-joint-state-publisher-gui \
-                 ros-humble-robot-state-publisher \
-                 ros-humble-rviz2
-Replace humble with your ROS 2 distro if needed.
+sudo apt install ros-humble-urdf-tutorial
+sudo apt install ros-humble-joint-state-publisher
+sudo apt install ros-humble-joint-state-publisher-gui
+sudo apt install ros-humble-robot-state-publisher
+sudo apt install ros-humble-rviz2
 ```
+Replace 'humble' with your ROS 2 distro if needed.
 
 2. **Clone the repository**  
 
