@@ -73,11 +73,13 @@ sudo apt install ros-humble-urdf-tutorial \
 Replace humble with your ROS 2 distro if needed.
 ```
 
-2. **Clone the repository**  
+2. **Create the workspace and Clone the repository**  
 
 ```bash
+mkdir ufractor_xarm7_ws
+cd ufractor_xarm7_ws
 git clone https://github.com/abdulmumeen-abdullahi/ufractor_xarm7.git
-cd ufractor_xarm7
+
 ```
 
 3. **Build the ROS 2 package**
