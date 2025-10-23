@@ -73,11 +73,13 @@ sudo apt install ros-humble-rviz2
 ```
 Replace 'humble' with your ROS 2 distro if needed.
 
-2. **Clone the repository**  
+2. **Create the workspace and Clone the repository**  
 
 ```bash
+mkdir -p ufractor_xarm7_ws/src
+cd ufractor_xarm7_ws/src
 git clone https://github.com/abdulmumeen-abdullahi/ufractor_xarm7.git
-cd ufractor_xarm7
+cd ..
 ```
 
 3. **Build the ROS 2 package**
@@ -90,7 +92,7 @@ source install/setup.bash
 4. **Launch Rviz with the Xarm7 URDF**
 
 ```bash
-ros2 launch urdf_tutorial display.launch.py model:=$PWD/ufactory_xarm7_description/urdf/ufactory_xarm7.urdf
+ros2 launch urdf_tutorial display.launch.py model:=$PWD/src/ufractor_xarm7/urdf/ufactory_xarm7.urdf
 ```
 - $PWD should point to the root of your cloned repository.
 - The ufactory_xarm7.urdf file must exist under ufactory_xarm7_description/urdf/.
