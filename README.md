@@ -3,8 +3,7 @@
 This project focuses on assembling, describing, and visualizing the **Ufactory Xarm7** robotic arm using **ROS 2** and the **Unified Robot Description Format (URDF)**.  
 The assembly strictly follows the [Ufactory Documentation](https://docs.ufactory.cc/user_manual/ufactoryStudio/11.technical_specifications.html).
 
-<img width="1366" height="768" alt="Ufactory Xarm7" src="https://github.com/user-attachments/assets/2a6973c7-57f5-4c7b-8bef-4acc0ae5a83b" />
-
+<img width="1366" height="768" alt="Ufactory Xarm7" src="https://github.com/user-attachments/assets/60453776-6bf4-4511-ba00-e3e0f33c9b2f" />
 
 ## Overview
 
