@@ -17,7 +17,7 @@
 
     <link name="link1">
         <visual>
-            <origin xyz = "0 0 0.25" rpy = "0 0 0"/>   
+            <origin xyz = "0 0 0" rpy = "0 0 0"/>   
             <geometry>
               <mesh filename="package://ufactory_xarm7_description/meshes/link1.stl" scale="1.0 1.0 1.0"/>
             </geometry>
@@ -27,7 +27,7 @@
 
     <link name="link2">
         <visual>
-            <origin xyz = "0 0 0.25" rpy = "1.57 3.1416 3.1416"/>   
+            <origin xyz = "0 0 0" rpy = "0 0 0"/>   
             <geometry>
               <mesh filename="package://ufactory_xarm7_description/meshes/link2.stl" scale="1.0 1.0 1.0"/>
             </geometry>
@@ -37,16 +37,17 @@
 
     <link name="link3">
         <visual>
-            <origin xyz = "0 0 0.54" rpy = "0.0 0.0 0.0"/>    <!--3.1416-->
+            <origin xyz = "0 0 0" rpy = "0 0 0"/>   
             <geometry>
               <mesh filename="package://ufactory_xarm7_description/meshes/link3.stl" scale="1.0 1.0 1.0"/>
             </geometry>
             <material name="white"/>
         </visual>
     </link>
+
     <link name="link4">
         <visual>
-            <origin xyz = "0.05 0 0.5395" rpy = "1.57 0.0 0.0"/>    <!--3.1416-->
+            <origin xyz = "0 0 0" rpy = "0 0 0"/>   
             <geometry>
               <mesh filename="package://ufactory_xarm7_description/meshes/link4.stl" scale="1.0 1.0 1.0"/>
             </geometry>
@@ -56,16 +57,17 @@
 
     <link name="link5">
         <visual>
-            <origin xyz = "0.13 0 0.23" rpy = "0.0 3.1416 3.1416"/>   
+            <origin xyz = "0 0 0" rpy = "0 0 0"/>   
             <geometry>
               <mesh filename="package://ufactory_xarm7_description/meshes/link5.stl" scale="1.0 1.0 1.0"/>
             </geometry>
             <material name="white"/>
         </visual>
     </link>
+
     <link name="link6">
         <visual>
-            <origin xyz = "0.13 0 0.23" rpy = "-1.571 0.0 0.0"/>   
+            <origin xyz = "0 0 0" rpy = "0 0 0"/>   
             <geometry>
               <mesh filename="package://ufactory_xarm7_description/meshes/link6.stl" scale="1.0 1.0 1.0"/>
             </geometry>
@@ -75,16 +77,17 @@
 
     <link name="link7">
         <visual>
-            <origin xyz = "0.205 0 0.135" rpy = "0 3.1416 3.1416"/>   
+            <origin xyz = "0 0 0" rpy = "0 0 0"/>   
             <geometry>
               <mesh filename="package://ufactory_xarm7_description/meshes/link7.stl" scale="1.0 1.0 1.0"/>
             </geometry>
             <material name="white"/>
         </visual>
     </link>
+
     <link name="gripper">
         <visual>
-            <origin xyz = "0.207 0 0.135" rpy = "0 3.1416 1.571"/>   
+            <origin xyz = "0 0 0" rpy = "0 0 0"/>   
             <geometry>
               <mesh filename="package://ufactory_xarm7_description/meshes/gripper_lite.stl" scale="1.0 1.0 1.0"/>
             </geometry>
@@ -94,7 +97,7 @@
 
    
     <joint name="base_link_to_link1" type="revolute">
-        <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+        <origin xyz="0 0 0.25" rpy="0.0 0.0 0.0"/>
         <parent link="base_link"/>
         <child link="link1"/>
         <axis xyz="0 1 0"/>
@@ -103,7 +106,7 @@
     </joint>
 
     <joint name="link1_to_link2" type="revolute">
-        <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/> <!-- 1.57 3.1416 3.1416 -->
+        <origin xyz="0 0 0" rpy="1.57 3.1416 3.1416"/>
         <parent link="link1"/>
         <child link="link2"/>
         <axis xyz="0 1 0"/>
@@ -111,14 +114,15 @@
     </joint>
 
     <joint name="link2_to_link3" type="revolute">
-        <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/> <!-- 0.0 0.0 3.1416-->
+        <origin xyz="0.05 -0.25 0" rpy="0.0 0.0 3.1416"/>
         <parent link="link2"/>
         <child link="link3"/>
         <axis xyz="0 1 0"/>
         <limit lower="-6.283" upper="6.283" effort="3.0" velocity="3.14"/>
     </joint>
+
     <joint name="link3_to_link4" type="revolute">
-        <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+        <origin xyz="0 0 -0.03" rpy="0.0 3.1416 0.0"/>
         <parent link="link3"/>
         <child link="link4"/>
         <axis xyz="0 1 0"/>
@@ -126,7 +130,7 @@
     </joint>
 
     <joint name="link4_to_link5" type="revolute">
-        <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+        <origin xyz="0.077 -0.33 0" rpy="1.57 0.0 0.0"/>
         <parent link="link4"/>
         <child link="link5"/>
         <axis xyz="0 1 0"/>
@@ -134,7 +138,7 @@
     </joint>
 
     <joint name="link5_to_link6" type="revolute">
-        <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+        <origin xyz="0 0 0" rpy="1.57 0.0 0.0"/>
         <parent link="link5"/>
         <child link="link6"/>
         <axis xyz="0 1 0"/>
@@ -150,10 +154,11 @@
     </joint>
 
     <joint name="link7_to_gripper" type="fixed">
-        <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+        <origin xyz="0.077 0.0605 0.0" rpy="-1.571 1.571 0.0"/>
         <parent link="link7"/>
         <child link="gripper"/>
     </joint>
+
 
 
 
