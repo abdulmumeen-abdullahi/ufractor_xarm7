@@ -3,6 +3,7 @@
 This project focuses on assembling, describing, and visualizing the **Ufactory Xarm7** robotic arm using **ROS 2** and the **Unified Robot Description Format (URDF)**.  
 The assembly strictly follows the [Ufactory Documentation](https://docs.ufactory.cc/user_manual/ufactoryStudio/11.technical_specifications.html).
 
+<img width="1366" height="768" alt="Ufactory Xarm7" src="https://github.com/user-attachments/assets/2a6973c7-57f5-4c7b-8bef-4acc0ae5a83b" />
 
 
 ## Overview
@@ -59,24 +60,26 @@ Follow these steps to visualize the Xarm7 in Rviz:
 
 ### 1. Install ROS 2 and Required Packages
 
-Make sure you have a ROS 2 distribution installed (Humble or Iron recommended).  
+Make sure you have a ROS 2 distribution installed (Humble recommended).  
 Then install the necessary packages:
 
 ```bash
 sudo apt update
-sudo apt install ros-humble-urdf-tutorial \
-                 ros-humble-joint-state-publisher \
-                 ros-humble-joint-state-publisher-gui \
-                 ros-humble-robot-state-publisher \
-                 ros-humble-rviz2
-Replace humble with your ROS 2 distro if needed.
+sudo apt install ros-humble-urdf-tutorial
+sudo apt install ros-humble-joint-state-publisher
+sudo apt install ros-humble-joint-state-publisher-gui
+sudo apt install ros-humble-robot-state-publisher
+sudo apt install ros-humble-rviz2
 ```
+Replace 'humble' with your ROS 2 distro if needed.
 
-2. **Clone the repository**  
+2. **Create the workspace and Clone the repository**  
 
 ```bash
+mkdir -p ufractor_xarm7_ws/src
+cd ufractor_xarm7_ws/src
 git clone https://github.com/abdulmumeen-abdullahi/ufractor_xarm7.git
-cd ufractor_xarm7
+cd ..
 ```
 
 3. **Build the ROS 2 package**
@@ -89,7 +92,7 @@ source install/setup.bash
 4. **Launch Rviz with the Xarm7 URDF**
 
 ```bash
-ros2 launch urdf_tutorial display.launch.py model:=$PWD/ufactory_xarm7_description/urdf/ufactory_xarm7.urdf
+ros2 launch urdf_tutorial display.launch.py model:=$PWD/src/ufractor_xarm7/urdf/ufactory_xarm7.urdf
 ```
 - $PWD should point to the root of your cloned repository.
 - The ufactory_xarm7.urdf file must exist under ufactory_xarm7_description/urdf/.
