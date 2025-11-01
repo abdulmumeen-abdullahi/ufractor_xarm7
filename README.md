@@ -91,7 +91,7 @@ source install/setup.bash
 4. **Launch Rviz with the Xarm7 URDF**
 
 ```bash
-ros2 launch urdf_tutorial display.launch.py model:=$PWD/src/ufractor_xarm7/urdf/ufactory_xarm7.urdf
+ros2 launch urdf_tutorial display.launch.py model:=$PWD/src/ufractor_xarm7/urdf/xarm7.urdf
 ```
 - $PWD should point to the root of your cloned repository.
 - The ufactory_xarm7.urdf file must exist under ufactory_xarm7_description/urdf/.
