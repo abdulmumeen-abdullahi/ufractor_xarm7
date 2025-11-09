@@ -47,14 +47,14 @@
     <limit effort="3.0" lower="-1.692" upper="3.142" velocity="3.14"/>
   </joint>
   <joint name="link6_to_link7" type="revolute">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <origin rpy="1.57 0.0 0.0" xyz="0.078 0.065 0.0"/>
     <parent link="link6"/>
     <child link="link7"/>
     <axis xyz="0 1 0"/>
     <limit effort="3.0" lower="-6.283" upper="6.283" velocity="3.14"/>
   </joint>
   <joint name="link7_to_gripper" type="fixed">
-    <origin rpy="-1.571 1.571 0.0" xyz="0.077 0.0605 0.0"/>
+    <origin rpy="0.0 3.141 1.571" xyz="0.0 0.0 -0.025"/>
     <parent link="link7"/>
     <child link="gripper"/>
   </joint>
@@ -69,6 +69,12 @@
       </geometry>
       <material name="white"/>
     </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ufactory_xarm7_description/meshes/link_base.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
   </link>
   <link name="link1">
     <visual>
@@ -78,6 +84,12 @@
       </geometry>
       <material name="white"/>
     </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ufactory_xarm7_description/meshes/link1.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
   </link>
   <link name="link2">
     <visual>
@@ -87,6 +99,12 @@
       </geometry>
       <material name="white"/>
     </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ufactory_xarm7_description/meshes/link2.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
   </link>
   <link name="link3">
     <visual>
@@ -96,6 +114,12 @@
       </geometry>
       <material name="white"/>
     </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ufactory_xarm7_description/meshes/link3.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
   </link>
   <link name="link4">
     <visual>
@@ -105,6 +129,12 @@
       </geometry>
       <material name="white"/>
     </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ufactory_xarm7_description/meshes/link4.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
   </link>
   <link name="link5">
     <visual>
@@ -114,6 +144,12 @@
       </geometry>
       <material name="white"/>
     </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ufactory_xarm7_description/meshes/link5.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
   </link>
   <link name="link6">
     <visual>
@@ -123,6 +159,12 @@
       </geometry>
       <material name="white"/>
     </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ufactory_xarm7_description/meshes/link6.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
   </link>
   <link name="link7">
     <visual>
@@ -132,6 +174,12 @@
       </geometry>
       <material name="white"/>
     </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ufactory_xarm7_description/meshes/link7.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
   </link>
   <link name="gripper">
     <visual>
@@ -141,5 +189,11 @@
       </geometry>
       <material name="white"/>
     </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ufactory_xarm7_description/meshes/gripper_lite.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
   </link>
 </robot>
