@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ufactory-xarm7-robot">
+  <xacro:arg name="sim_gazebo" default="false"/>
+
+  <!-- Load common definitions -->
+  <xacro:include filename="materials.xacro"/>
+  <xacro:include filename="macros.xacro"/>
+  <xacro:include filename="joints.xacro"/>
+
+
+  <!-- Load robot color -->
+  <xacro:material_white/>
+
+  <!-- Define links -->
+  <xacro:u_xarm7_link name="base_link" mesh="link_base.stl"/>
+  <xacro:u_xarm7_link name="link1" mesh="link1.stl"/>
+  <xacro:u_xarm7_link name="link2" mesh="link2.stl"/>
+  <xacro:u_xarm7_link name="link3" mesh="link3.stl"/>
+  <xacro:u_xarm7_link name="link4" mesh="link4.stl"/>
+  <xacro:u_xarm7_link name="link5" mesh="link5.stl"/>
+  <xacro:u_xarm7_link name="link6" mesh="link6.stl"/>
+  <xacro:u_xarm7_link name="link7" mesh="link7.stl"/>
+  <xacro:u_xarm7_link name="gripper" mesh="gripper_lite.stl"/>
+
+</robot>
