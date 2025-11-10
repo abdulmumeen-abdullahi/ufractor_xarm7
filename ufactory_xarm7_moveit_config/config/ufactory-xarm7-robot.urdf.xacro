@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ufactory-xarm7-robot">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import ufactory-xarm7-robot urdf file -->
+    <xacro:include filename="$(find ufactory_xarm7_description)/urdf/xarm7.urdf" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="ufactory-xarm7-robot.ros2_control.xacro" />
+
+
+    
+
+    <xacro:ufactory-xarm7-robot_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

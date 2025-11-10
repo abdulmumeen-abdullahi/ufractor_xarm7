@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: ufactory_xarm7_description
+    relative_path: urdf/xarm7.urdf
+  srdf:
+    relative_path: config/ufactory-xarm7-robot.srdf
+  package_settings:
+    author_name: Microsmart
+    author_email: olalekanabdulmumeen3@gmail.com
+    generated_timestamp: 1762583907
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
