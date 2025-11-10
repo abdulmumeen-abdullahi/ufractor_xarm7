@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Define joints -->
+  <xacro:u_xarm7_joint name="base_link_to_link1" parent="base_link" child="link1"
+                    xyz="0 0 0.25" rpy="0.0 0.0 0.0" axis="0 1 0"
+                    lower="-6.283" upper="6.283"/>
+  
+  <xacro:u_xarm7_joint name="link1_to_link2" parent="link1" child="link2"
+                    xyz="0 0 0" rpy="1.57 3.1416 3.1416" axis="0 1 0"
+                    lower="-2.059" upper="2.094"/>
+
+  <xacro:u_xarm7_joint name="link2_to_link3" parent="link2" child="link3"
+                    xyz="0.05 -0.25 0" rpy="0.0 0.0 3.1416" axis="0 1 0"
+                    lower="-6.283" upper="6.283"/>
+
+  <xacro:u_xarm7_joint name="link3_to_link4" parent="link3" child="link4"
+                    xyz="0.0 0.0 -0.03" rpy="0.0 3.1416 0.0" axis="0 1 0"
+                    lower="-0.192" upper="3.927"/>
+
+  <xacro:u_xarm7_joint name="link4_to_link5" parent="link4" child="link5"
+                    xyz="0.077 -0.33 0" rpy="1.57 0.0 0.0" axis="0 1 0"
+                    lower="-6.283" upper="6.283"/>
+
+  <xacro:u_xarm7_joint name="link5_to_link6" parent="link5" child="link6"
+                    xyz="0 0 0" rpy="1.57 0.0 0.0" axis="0 1 0"
+                    lower="-1.692" upper="3.142"/>
+
+  <xacro:u_xarm7_joint name="link6_to_link7" parent="link6" child="link7"
+                    xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" axis="0 1 0"
+                    lower="-6.283" upper="6.283"/>
+
+  <xacro:u_xarm7_fixed name="link7_to_gripper" parent="link7" child="gripper"
+                    xyz="0.077 0.0605 0.0" rpy="-1.571 1.571 0.0"/>
+
+</robot>
