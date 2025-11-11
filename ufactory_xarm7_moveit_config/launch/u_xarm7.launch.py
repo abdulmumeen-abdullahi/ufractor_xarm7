@@ -62,7 +62,6 @@ def generate_launch_description():
         executable="move_group",
         output="screen",
         parameters=[moveit_config.to_dict()],
-            #{"use_octomap": False},  # Added this
         arguments=["--ros_args", "--log-level", "info"],
     )
 
