@@ -6,6 +6,7 @@
   <xacro:include filename="materials.xacro"/>
   <xacro:include filename="macros.xacro"/>
   <xacro:include filename="joints.xacro"/>
+  <xacro:property name="gazebo_control" value="false" />
 
 
   <!-- Load robot color -->

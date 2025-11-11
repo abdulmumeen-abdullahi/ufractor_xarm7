@@ -11,6 +11,13 @@
         </geometry>
         <material name="white"/>
       </visual>
+
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://ufactory_xarm7_description/meshes/${mesh}" scale="1.0 1.0 1.0"/>
+        </geometry>
+      </collision>
     </link>
   </xacro:macro>
 
