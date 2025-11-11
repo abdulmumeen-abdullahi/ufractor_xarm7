@@ -11,7 +11,7 @@ import os
 # from launch.substitutions import Command, FindExecutable, LaunchConfiguration, PathJoi
 # from launch_ros.substitutions import FindPackageShare
 # import xacro
-# import yaml
+import yaml
 
 
 def generate_launch_description():
@@ -61,10 +61,9 @@ def generate_launch_description():
         package="moveit_ros_move_group",
         executable="move_group",
         output="screen",
-        parameters=[
-            moveit_config.to_dict(),
-            {"ros_args": ["--log-level", "info"]},
-        ],
+        parameters=[moveit_config.to_dict()],
+            #{"use_octomap": False},  # Added this
+        arguments=["--ros_args", "--log-level", "info"],
     )
 
     rviz_config_path = os.path.join(
@@ -82,8 +81,8 @@ def generate_launch_description():
         parameters=[
             moveit_config.robot_description,
             moveit_config.robot_description_semantic,
-            moveit_config.robot_description_kinematics,
             moveit_config.planning_pipelines,
+            moveit_config.robot_description_kinematics,
         ],
     )
 
