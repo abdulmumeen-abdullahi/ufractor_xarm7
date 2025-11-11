@@ -9,6 +9,14 @@ controller_manager:
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
+      joints:
+        - base_link_to_link1
+        - link1_to_link2
+        - link2_to_link3
+        - link3_to_link4
+        - link4_to_link5
+        - link5_to_link6
+        - link6_to_link7
 
 xarm7_controller:
   ros__parameters:

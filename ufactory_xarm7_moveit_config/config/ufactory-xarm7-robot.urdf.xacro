@@ -9,8 +9,6 @@
     <xacro:include filename="ufactory-xarm7-robot.ros2_control.xacro" />
 
 
-    
-
     <xacro:ufactory-xarm7-robot_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
 
 </robot>
