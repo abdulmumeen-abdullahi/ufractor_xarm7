@@ -8,7 +8,7 @@ The assembly strictly follows the [Ufactory Documentation](https://docs.ufactory
 ## Overview
 
 The project defines the full URDF structure for the Xarm7, including links, joints, and visual meshes with assigned materials.  
-Each link references its mesh in the `ufractory_xarm7_ws/src/ufactory_xarm7_description/meshes` directory.  
+Each link references its mesh in the `ufactory_xarm7_description/meshes` directory.  
 The arm is fully visualizable in **Rviz**, and **MoveIt** is configured for advanced motion planning and trajectory execution.  
 Simulation, motion planning, and control can all be performed in ROS 2 with the provided configuration.
 
