@@ -8,7 +8,6 @@ moveit_simple_controller_manager:
 
   xarm7_controller:
     type: FollowJointTrajectory
-    action_ns: follow_joint_trajectory
     joints:
       - base_link_to_link1
       - link1_to_link2
@@ -17,3 +16,4 @@ moveit_simple_controller_manager:
       - link4_to_link5
       - link5_to_link6
       - link6_to_link7
+    action_ns: follow_joint_trajectory
