@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Define links -->
+  <xacro:u_xarm7_link name="base_link" mesh="link_base.stl"
+                    xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+
+  <xacro:u_xarm7_link name="link1" mesh="link1.stl"
+                    xyz="0.0 0.0 0.11" rpy="0.0 0.0 0.0"/>
+
+  <xacro:u_xarm7_link name="link2" mesh="link2.stl"
+                    xyz="0.0 -0.077 0.0" rpy="-1.57 0.0 0.0"/>
+
+  <xacro:u_xarm7_link name="link3" mesh="link3.stl"
+                    xyz="0.0 0.0 0.10" rpy="0.0 0.0 0.0"/>
+
+  <xacro:u_xarm7_link name="link4" mesh="link4.stl"
+                    xyz="0.0 0.055 0.0" rpy="1.577 0.0 0.0"/>
+
+  <xacro:u_xarm7_link name="link5" mesh="link5.stl"
+                    xyz="0.0 0.0 -0.17" rpy="3.14 0.0 0.0"/>
+
+  <xacro:u_xarm7_link name="link6" mesh="link6.stl"
+                    xyz="0.0 0.0 0.0" rpy="-1.571 0.0 0.0"/>
+
+  <xacro:u_xarm7_link name="link7" mesh="link7.stl"
+                    xyz="0.0 0.0 -0.028" rpy="3.142 0.0 0.0"/>
+
+  <xacro:u_xarm7_link name="gripper" mesh="gripper_lite.stl"
+                    xyz="0.0 0.0 0.0" rpy="3.142 0.0 1.57"/>
+
+</robot>
