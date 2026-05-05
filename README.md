@@ -128,5 +128,3 @@ This starts `ros2_control_node`, loads controllers (`xarm7_controller` and `join
 - **Dynamic Simulation:** Gazebo or Ignition integration.
 - **Advanced Motion Planning:** Use MoveIt for automated trajectories, pick-and-place, and custom motion sequences.
 - **Sensor & Gripper Modeling:** Extend URDF to include sensors and gripper interactions.
-
-*Developed as part of the [Aurora Robotics](https://ng.linkedin.com/company/aurora-robotics-in) Core Robotics Workshop – Task 4.*
